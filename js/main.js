@@ -9,6 +9,7 @@ var overcolorlink = document.querySelectorAll('body > div.overlay > div > ul > l
     c = 0,
     close = document.getElementById("close"),
     next = document.getElementById("next"),
+    back = document.getElementById("background-content"),
     on_resize = function(c, t) {
         onresize = function() {
             clearTimeout(t);
@@ -59,6 +60,8 @@ window.onload = function() {
     titles.textContent = webpages[i].title;
     sitinfo.textContent = webpages[i].siteInfo;
     link.textContent = webpages[i].link;
+    back.style.display = "block";
+
 };
 
 next.addEventListener('click', function(event) {
