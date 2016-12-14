@@ -60,7 +60,10 @@ window.onload = function() {
     titles.textContent = webpages[i].title;
     sitinfo.textContent = webpages[i].siteInfo;
     link.textContent = webpages[i].link;
-    back.style.display = "block";
+    if (back !== null) {
+        back.style.display = "block";
+    }
+
 
 };
 
