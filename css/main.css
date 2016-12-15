@@ -291,6 +291,27 @@ nav {
     cursor: pointer;
 }
 
+.l1 {
+    height: 10px;
+    display: block;
+    background-color: #111;
+    margin-bottom:10px;
+}
+
+.l2 {
+    height: 10px;
+    display: block;
+    background-color: #111;
+    margin-bottom:10px;
+}
+
+
+.l3 {
+    height: 10px;
+    display: block;
+    background-color: #111;
+}
+
 nav > ul {
     width: 50px;
 }
@@ -436,6 +457,10 @@ nav > ul:active {
 /* Extra Small Devices, Phones */
 
 @media only screen and (max-width: 480px) {
+nav {
+      top:0;
+      right:0;
+}
 .offset60 {
     width: 100%;
     margin-right: 0%;
@@ -454,6 +479,12 @@ nav > ul:active {
     float: none;
     margin-top: 20px;
     box-sizing:border-box;
+}
+section h1 {
+    font-size: 150%;
+}
+section h3 {
+    font-size: 80%;
 }
 }
 
