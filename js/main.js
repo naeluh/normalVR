@@ -67,7 +67,7 @@ window.onload = function() {
 
 };
 
-next.addEventListener('click', function(event) { 
+next.addEventListener('click', function(event) {
     c++;
     if (c >= webpages.length) {
         c = 0;
@@ -80,7 +80,7 @@ next.addEventListener('click', function(event) {
             link.textContent = webpages[i].link;
         }
     }
-    console.log(c);
+    alert(c);
     return false;
 });
 
