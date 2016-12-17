@@ -56,10 +56,10 @@ window.onload = function() {
     for (var i = 0, len = menubuttons.length; i < len; i++) {
         menubuttons[i].addEventListener('click', toggleOverlay);
     }
-    images.style.backgroundImage = "url(" + webpages[i].img + ")";
-    titles.textContent = webpages[i].title;
-    sitinfo.textContent = webpages[i].siteInfo;
-    link.textContent = webpages[i].link;
+    images.style.backgroundImage = "url(" + webpages[c].img + ")";
+    titles.textContent = webpages[c].title;
+    sitinfo.textContent = webpages[c].siteInfo;
+    link.textContent = webpages[c].link;
     if (back !== null) {
         back.style.display = "block";
     }

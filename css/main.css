@@ -441,12 +441,22 @@ nav > ul:active {
 
 .next i {
     color: #fff;
-    background: #111;
+    background: rgba(0,0,0,0.85);
     padding: 20px 29px;
     font-size: 30px;
     float: right;
     cursor:pointer;
 }
+
+.next i:hover {
+    background: rgba(0,0,0,0.95);
+}
+
+.next i:active {
+    background: rgba(0,0,0,1.0);
+}
+
+
 
 
 /* Custom, iPhone Retina */
