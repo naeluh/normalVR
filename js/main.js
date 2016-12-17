@@ -80,7 +80,6 @@ next.addEventListener('click', function(event) {
             link.textContent = webpages[i].link;
         }
     }
-    console.log('hello'+c);
     return false;
 });
 
