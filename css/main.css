@@ -281,7 +281,6 @@ body {
 
 nav {
     position: fixed;
-    z-index: 1;
     right: 100px;
 }
 
@@ -501,7 +500,12 @@ section h3 {
 
 /* Small Devices, Tablets */
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    .overlay-content ul li a {
+    font-size: 25px;
+    text-align: right;
+}
+}
 
 
 /* Small Devices, Tablets */

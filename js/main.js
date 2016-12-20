@@ -1,6 +1,4 @@
-var overcolorlink = document.querySelectorAll('body > div.overlay > div > ul > li'),
-  menubuttons = document.querySelectorAll('.list'),
-  overlay = document.querySelector("body"),
+var overlay = document.querySelector("body"),
   overcolor = document.querySelectorAll('.overlay'),
   images = document.getElementById("image"),
   titles = document.getElementById("title"),
@@ -22,6 +20,7 @@ var overcolorlink = document.querySelectorAll('body > div.overlay > div > ul > l
       overlay.classList.toggle('hide-overlay');
     }
     var backcolor = window.getComputedStyle(this, null).getPropertyValue('background-color');
+    var overcolorlink = document.querySelectorAll('body > div.overlay > div > ul > li');
     for (var i = 0, len = overcolorlink.length; i < len; i++) {
       overcolorlink[i].style.backgroundColor = backcolor;
     }
@@ -50,8 +49,19 @@ var overcolorlink = document.querySelectorAll('body > div.overlay > div > ul > l
     'img': 'assets/nhm1.png',
     'link': 'http://nhm.org/',
     'siteInfo': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  }, {
+    'id': 4,
+    'title': 'nhm.org/pterosaurs',
+    'img': 'assets/nhm1.png',
+    'link': 'http://nhm.org/',
+    'siteInfo': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   }];
 window.onload = function() {
+  for (var w = 0; w < webpages.length; w++) {
+        var h = '<li><a href="'+webpages[w].title+'"><p>'+webpages[w].title+'</p><img src="" alt=""></a></li>';
+        document.getElementById('weblist').innerHTML += h;
+  }
+  var menubuttons = document.querySelectorAll('.list');
   for (var i = 0, len = menubuttons.length; i < len; i++) {
     menubuttons[i].addEventListener('click', toggleOverlay);
   }
