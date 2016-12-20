@@ -23,6 +23,21 @@ var overlay = document.querySelector("body"),
     var overcolorlink = document.querySelectorAll('body > div.overlay > div > ul > li');
     for (var i = 0, len = overcolorlink.length; i < len; i++) {
       overcolorlink[i].style.backgroundColor = backcolor;
+      overcolorlink[i].setAttribute('data', i);
+      overcolorlink[i].addEventListener('click', function(event) {
+        var a = this.getAttribute('data');
+        for (var i = 0; i < webpages.length; i++) {
+          if (webpages[i].id === Number(a)) {
+              overlay.className = "hide-overlay";
+            images.style.backgroundImage = "url(" + webpages[i].img + ")";
+            titles.textContent = webpages[i].title;
+            sitinfo.textContent = webpages[i].siteInfo;
+            link.textContent = webpages[i].link;
+          }
+        }
+        c = a;
+        return false;
+      });
     }
   },
   webpages = [{
@@ -52,13 +67,13 @@ var overlay = document.querySelector("body"),
   }, {
     'id': 4,
     'title': 'nhm.org/pterosaurs',
-    'img': 'assets/nhm1.png',
-    'link': 'http://nhm.org/',
+    'img': 'assets/ptero.png',
+    'link': 'http://nhm.org/pterosaurs/',
     'siteInfo': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   }];
 window.onload = function() {
   for (var w = 0; w < webpages.length; w++) {
-        var h = '<li><a href="'+webpages[w].title+'"><p>'+webpages[w].title+'</p><img src="" alt=""></a></li>';
+        var h = '<li><a href="#"><p>'+webpages[w].title+'</p><img src="" alt=""></a></li>';
         document.getElementById('weblist').innerHTML += h;
   }
   var menubuttons = document.querySelectorAll('.list');
