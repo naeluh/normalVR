@@ -63,7 +63,7 @@ var overlay = document.querySelector("body"),
     'title': 'nhm.org',
     'img': 'assets/nhm1.png',
     'link': 'http://nhm.org/',
-    'siteInfo': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    'siteInfo': 'For the main NHM site I coded a step-by-step field trip sign-up mechanism for the education department, with specific logic that catered to very specific needs. I wrote the new homepage design that updated an aging design with a more pointed and strategic design, that benefited not only use of the page but also leveraging possible analytic conversion. I added a custom calendar front end and back end solution that works with Drupal, providing end points that can power multiple contexts throughout the site. This year, I worked with our digital designer to add a modernized basic template that is responsive and uses a new menu that makes us of Drupal’s menu system so it could be maintained by Drupal’s GUI. I make all the main updates and strategies that are implemented for the NHM websites and digital properties currently.',
   }, {
     'id': 4,
     'title': 'nhm.org/pterosaurs',
