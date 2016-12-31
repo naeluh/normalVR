@@ -45,7 +45,7 @@ var overlay = document.querySelector("body"),
     'title': 'gifpaint.in',
     'img': 'assets/ezgif.com-754a7b199a.gif',
     'link': 'http://gifpaint.hulea.org/',
-    'siteInfo': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    'siteInfo': 'There are a lot of odd spaces in the internet, one of which is the animated gif. After completing yourimage.io, I was interested in extending the idea of random image collage and image painting to make use of animated content. Utilizing gif.js, native canvas api and imgur I was able to create a website that has the ability to paint and collage with animated content. I want to add more brushes and the ability to save and share the artwork that is created.',
   }, {
     'id': 1,
     'title': 'yourimage.io',
