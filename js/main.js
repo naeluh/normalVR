@@ -102,9 +102,11 @@ next.addEventListener('click', function(event) {
       link.textContent = webpages[i].link;
     }
   }
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
   return false;
 });
 close.addEventListener('click', function(event) {
   overlay.className = "hide-overlay";
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
   return false;
 });
