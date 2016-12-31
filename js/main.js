@@ -54,7 +54,7 @@ var overlay = document.querySelector("body"),
     'siteInfo': 'I used the JavaScript canvas API and paper.js to create this website. It allows users to use their mouse or touch device to paint with images from the Imgur API. It also uses a node.js server to allow users to save their creations locally. I also use this same approach to save all images that are created on the server.',
   }, {
     'id': 2,
-    'title': '4d Chat',
+    'title': '4dchat.hulea.org',
     'img': 'assets/4d.png',
     'link': 'http://4dchat.hulea.org/',
     'siteInfo': 'This website is a work in progress. It uses three.js and node.js to create a  interactive observation work space for discussion and updates to a 3D project. I used three.js to upload files to the server that creates a room users can enter and see and move the object in view and the others in the room can see what the active user can see. In each room there is a localized chat session. The long term objective for this project is to continue to add functionality and upadte the design to release a 1.0 version late 2017.',
