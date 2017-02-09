@@ -122,6 +122,7 @@ window.onload = function() {
   document.getElementById("load").style.display = 'none';
 };
 next.addEventListener('click', function(event) {
+  var c = window.location.search.replace('?webpage=','');
   c++;
   if (c >= webpages.length) {
     c = 0;
