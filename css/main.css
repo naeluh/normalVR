@@ -368,7 +368,7 @@ nav > ul:active {
 
 #title {
     /* position: fixed; */
-    padding: 10px;
+    /* padding: 10px; */
     background-color: #fff;
     top: 10px;
     right: 10px
@@ -412,6 +412,20 @@ nav > ul:active {
     background-position: center center;
 }
 
+.imgTitle {
+    color: #fff;
+    margin: auto;
+    padding: 0;
+    font-size: 150%;
+    margin-top: -40px;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.offset0 a {
+    text-decoration:none;
+}
+
 .imgHero img {
     width: 100%
 }
@@ -431,7 +445,7 @@ nav > ul:active {
 }
 
 .offset0 {
-    margin: 20px 0
+    margin: 50px 0
 }
 
 #next i {

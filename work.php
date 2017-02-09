@@ -1,6 +1,90 @@
+<!doctype html>
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Nick Hulea</title>
+    <meta name="description" content="fuck nhm !">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://use.typekit.net/yer1yzk.js"></script>
+    <script>
+    try {
+        Typekit.load({
+            async: true
+        });
+    } catch (e) {}
+    </script>
+</head>
+
+<body class="hide-overlay">
+    <nav>
+        <ul>
+            <li class="list one"></li>
+            <!--li class="list two"></li>
+            <li class="list three"></li>
+            <li class="list four"></li>
+            <li class="list five"></li>
+            <li class="list six"></li> -->
+        </ul>
+        <ul style="display:none;">
+            <li class="list lines">
+            	<span contenteditable="false" class="l1"></span>
+            	<span contenteditable="false" class="l2"></span>
+            	<span contenteditable="false" class="l3"></span>
+            </li>
+            <!-- <li class="list two"></li>
+            <li class="list three"></li>
+            <li class="list four"></li>
+            <li class="list five"></li>
+            <li class="list six"></li> -->
+        </ul>
+    </nav>
+    <div class="overlay">
+        <div class="overlay-content">
+            <!-- <div id="title">
+    <h1>Title</h1>
+   </div> -->
+            <div id="close"><span>close</span>
+            </div>
+            <ul id="weblist">
+            </ul>
+        </div>
+    </div>
+    <div class="background-content">
+        <section class="offset60">
+            <h1 contenteditable="false" id="title"></h1>
+        </section>
+        <!-- <section class="offset60">
+            <h2 contenteditable="false">Web</h2>
+        </section> -->
+        <div id="work_content"></div>    
+        <section class="offset60">
+            <h3><a contenteditable="false" id="link" target="_blank" href="http://gifpaint.hulea.org/"></a></h3>
+            <p id="description" contenteditable="false"> </p>
+        </section>
+        <section class="offset40" style="display: none;">
+            <a id="next" class="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </section>
+    </div>
+    <div id="load"><div><b>Loading ...</b></div></div> 
+    <!-- <script type="text/javascript" src="js/main.js"></script> -->
+    <script type="text/javascript">
+        console.log('js');
+var parser = window.location;
+parser.href;     // => "full url"
+parser.protocol; // => "http:"
+parser.hostname; // => "example.com"
+parser.port;     // => "3000"
+parser.pathname; // => "/pathname/"
+parser.search;   // => "?search=test"
+parser.hash;     // => "#hash"
+parser.host;     // => "example.com:3000"
+console.log(parser)
 var overlay = document.querySelector("body"),
   overcolor = document.querySelectorAll('.overlay'),
-  images = document.getElementById("image"),
+  //images = document.getElementById("image"),
   titles = document.getElementById("title"),
   sitinfo = document.getElementById("description"),
   link = document.getElementById("link"),
@@ -28,11 +112,11 @@ var overlay = document.querySelector("body"),
         var a = this.getAttribute('data');
         for (var i = 0; i < webpages.length; i++) {
           if (webpages[i].id === Number(a)) {
-              overlay.className = "hide-overlay";
+            overlay.className = "hide-overlay";
             //images.style.backgroundImage = "url(" + webpages[i].img + ")";
-            //titles.textContent = webpages[i].title;
-            //sitinfo.textContent = webpages[i].siteInfo;
-            //link.textContent = webpages[i].link;
+            titles.textContent = webpages[i].title;
+            sitinfo.textContent = webpages[i].siteInfo;
+            link.textContent = webpages[i].link;
           }
         }
         c = a;
@@ -40,7 +124,7 @@ var overlay = document.querySelector("body"),
       });
     }
   },
-  menus = [{
+  webpages = [{
     'id': 0,
     'title': '127.0.0.1',
     'img': '',
@@ -50,13 +134,13 @@ var overlay = document.querySelector("body"),
     'id': 1,
     'title': 'Work',
     'img': '',
-    'link': 'work.php',
+    'link': 'work',
     'siteInfo': '',
   }, {
     'id': 2,
     'title': 'Contact',
     'img': '',
-    'link': 'contact.php',
+    'link': 'work.php',
     'siteInfo': '',
   }, {
     'id': 3,
@@ -64,8 +148,8 @@ var overlay = document.querySelector("body"),
     'img': '',
     'link': 'about',
     'siteInfo': '',
-  }],
-  webpages = [{
+  }];
+  work = [{
     'id': 0,
     'title': 'gifpaint.in',
     'img': 'assets/ezgif.com-754a7b199a.gif',
@@ -97,48 +181,41 @@ var overlay = document.querySelector("body"),
     'siteInfo': '<p>I converted old code from a game the institution paid for several years ago into a robust, responsive game that allows users to determine what pterosaur they “were,” based on question logic.</p><p> The entire site was built off a responsive framework that I developed, because I needed all the code to play together, and a framework would have slowed the process. I created a “pterosaur tracker” that used the Google maps API and JS to show a pterosaur fly across the U.S., making stops on its way to the museum. </p><p>I utilized the JS Canvas API to create an image that would follow the rotational position of the KML points which gave a feeling of the pterosaur actually flying. I used requestAnimationFrame and the rendering engine which provided the pterosaur flying on the Google Map with 60fps, allowing fluid animation and preventing jitter.</p>',
   }];
 window.onload = function() {
-  var uuid = window.location.search.replace('?webpage=','');
-  console.log(uuid)
-  for (var w = 0; w < menus.length; w++) {
-        var h = '<li><a href="'+menus[w].link+'"><p contenteditable="false" >'+menus[w].title+'</p><img src="" alt=""></a></li>';
+
+
+  for (var w = 0; w < webpages.length; w++) {
+        var h = '<li><a href="#"><p contenteditable="false" >'+webpages[w].title+'</p><img src="" alt=""></a></li>';
         document.getElementById('weblist').innerHTML += h;
   }
   var menubuttons = document.querySelectorAll('.list');
   for (var i = 0, len = menubuttons.length; i < len; i++) {
     menubuttons[i].addEventListener('click', toggleOverlay);
   }
-
-  for (var i = 0; i < webpages.length; i++) {
-    if (webpages[i].id === Number(uuid)) {
-      images.style.backgroundImage = "url(" + webpages[i].img + ")";
-      titles.textContent = webpages[i].title;
-      sitinfo.innerHTML = webpages[i].siteInfo;
-      link.textContent = webpages[i].link;
-    }
-  }
+  //images.style.backgroundImage = "url(" + webpages[c].img + ")";
+  titles.textContent = webpages[c].title;
+  sitinfo.innerHTML = webpages[c].siteInfo;
+  link.textContent = webpages[c].link;
   if (back !== null) {
     back.style.display = "block";
   }
   document.getElementById("load").style.display = 'none';
 };
-next.addEventListener('click', function(event) {
-  c++;
-  if (c >= webpages.length) {
-    c = 0;
-  }
-  for (var i = 0; i < webpages.length; i++) {
-    if (webpages[i].id === c) {
-      images.style.backgroundImage = "url(" + webpages[i].img + ")";
-      titles.textContent = webpages[i].title;
-      sitinfo.innerHTML = webpages[i].siteInfo;
-      link.textContent = webpages[i].link;
-    }
-  }
-  document.body.scrollTop = document.documentElement.scrollTop = 0;
-  return false;
-});
+
+for (var i = 0; i < work.length; i++) {
+  content = '<section class="offset0"><a href="pages.html?webpage='+i+'" title="#" alt="#"><div  class="imgHero" style="background-image: url('+work[i].img+')"></div><h2 class="imgTitle">'+work[i].title+'</h2></a></section>';
+  document.getElementById('work_content').insertAdjacentHTML('beforeend',content);
+}
+
+
+
+
+
 close.addEventListener('click', function(event) {
   overlay.className = "hide-overlay";
   document.body.scrollTop = document.documentElement.scrollTop = 0;
   return false;
 });
+    </script>
+</body>
+
+</html>
