@@ -44,7 +44,7 @@ var overlay = document.querySelector("body"),
         'id': 0,
         'title': '127.0.0.1',
         'img': '',
-        'link': 'home',
+        'link': '/',
         'siteInfo': '',
     }, {
         'id': 1,
