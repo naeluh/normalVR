@@ -22,7 +22,7 @@
     <nav>
         <ul>
             <li class="list one"></li>
-            <!--li class="list two"></li>
+            <!-- <li class="list two"></li>
             <li class="list three"></li>
             <li class="list four"></li>
             <li class="list five"></li>
@@ -56,21 +56,19 @@
         <section class="offset60">
             <h1 contenteditable="false" id="title"></h1>
         </section>
-        <!-- <section class="offset60">
-            <h2 contenteditable="false">Web</h2>
-        </section> -->
-        <div id="work_content"></div>    
+        <section class="offset0">
+            <div id="image" class="imgHero" style="background-image: url()"></div>
+        </section>
         <section class="offset60">
             <h3><a contenteditable="false" id="link" target="_blank" href="http://gifpaint.hulea.org/"></a></h3>
             <p id="description" contenteditable="false"> </p>
         </section>
-        <section class="offset40" style="display: none;">
-            <a id="next" class="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        <section class="offset40">
+            <a id="next" class="next" href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </section>
     </div>
-    <div id="load"><div><b>Loading ...</b></div></div> 
-    <!-- <script type="text/javascript" src="js/main.js"></script> -->
-<script type="text/javascript" src="js/work.js"></script>
+    <div id="load"><div><b>Loading ...</b></div></div>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
