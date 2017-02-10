@@ -344,18 +344,18 @@ nav > ul:active {
 }
 
 .overlay-content ul {
-    list-style: none
+    list-style: none;
 }
 
 .overlay-content ul li a {
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 12vh 2rem;
     color: #eee;
-    font-size: 70px;
+    font-size: 100px;
     text-transform: uppercase;
     text-decoration: none;
     display: block;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .overlay-content ul li {

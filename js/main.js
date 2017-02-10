@@ -119,13 +119,13 @@ window.onload = function() {
   if (back !== null) {
     back.style.display = "block";
   }
-  document.getElementById("load").style.display = 'none';
-};
-next.addEventListener('click', function(event) {
+  next.addEventListener('click', function(event) {
   var c = window.location.search.replace('?webpage=','');
   c++;
+  this.setAttribute('href','pages.html?webpage='+c)
   if (c >= webpages.length) {
     c = 0;
+     this.setAttribute('href','pages.html?webpage='+c)
   }
   for (var i = 0; i < webpages.length; i++) {
     if (webpages[i].id === c) {
@@ -138,6 +138,8 @@ next.addEventListener('click', function(event) {
   document.body.scrollTop = document.documentElement.scrollTop = 0;
   return false;
 });
+  document.getElementById("load").style.display = 'none';
+};
 close.addEventListener('click', function(event) {
   overlay.className = "hide-overlay";
   document.body.scrollTop = document.documentElement.scrollTop = 0;
