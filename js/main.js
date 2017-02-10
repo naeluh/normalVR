@@ -96,7 +96,23 @@ var overlay = document.querySelector("body"),
         'link': 'http://nhm.org/pterosaurs/',
         'siteInfo': '<p>I converted old code from a game the institution paid for several years ago into a robust, responsive game that allows users to determine what pterosaur they “were,” based on question logic.</p><p> The entire site was built off a responsive framework that I developed, because I needed all the code to play together, and a framework would have slowed the process. I created a “pterosaur tracker” that used the Google maps API and JS to show a pterosaur fly across the U.S., making stops on its way to the museum. </p><p>I utilized the JS Canvas API to create an image that would follow the rotational position of the KML points which gave a feeling of the pterosaur actually flying. I used requestAnimationFrame and the rendering engine which provided the pterosaur flying on the Google Map with 60fps, allowing fluid animation and preventing jitter.</p>',
     }];
+
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+
 window.onload = function() {
+
+if (window.location.href.indexOf('index') !== -1) {
+var color = '#' + Math.random().toString(16).slice(2, 8).toUpperCase();
+var block = document.getElementById('block')
+    r = getRandomArbitrary(1.3432, 70.6546);
+    block.style.transform = 'rotate3d(1, 1, 1, ' + r + 'deg)';
+    block.style.webkitTransform = 'rotate3d(1, 1, 1, ' + r + 'deg)';
+    block.style.backgroundColor = color;
+}
+
     var uuid = window.location.search.replace('?webpage=', '');
     console.log(uuid)
     for (var w = 0; w < menus.length; w++) {
@@ -107,29 +123,9 @@ window.onload = function() {
     for (var i = 0, len = menubuttons.length; i < len; i++) {
         menubuttons[i].addEventListener('click', toggleOverlay);
     }
-
-    for (var i = 0; i < webpages.length; i++) {
-        if (webpages[i].id === Number(uuid)) {
-            images.style.backgroundImage = "url(" + webpages[i].img + ")";
-            titles.textContent = webpages[i].title;
-            sitinfo.innerHTML = webpages[i].siteInfo;
-            link.textContent = webpages[i].link;
-            link.setAttribute('href', webpages[i].link);
-        }
-    }
-    if (back !== null) {
-        back.style.display = "block";
-    }
-    next.addEventListener('click', function(event) {
-        var c = window.location.search.replace('?webpage=', '');
-        c++;
-        this.setAttribute('href', 'pages.php?webpage=' + c)
-        if (c >= webpages.length) {
-            c = 0;
-            this.setAttribute('href', 'pages.php?webpage=' + c)
-        }
+    if (window.location.href.indexOf('index') === -1) {
         for (var i = 0; i < webpages.length; i++) {
-            if (webpages[i].id === c) {
+            if (webpages[i].id === Number(uuid)) {
                 images.style.backgroundImage = "url(" + webpages[i].img + ")";
                 titles.textContent = webpages[i].title;
                 sitinfo.innerHTML = webpages[i].siteInfo;
@@ -137,9 +133,32 @@ window.onload = function() {
                 link.setAttribute('href', webpages[i].link);
             }
         }
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
-        return false;
-    });
+    }
+    if (back !== null) {
+        back.style.display = "block";
+    }
+    if (window.location.href.indexOf('index') === -1) {
+        next.addEventListener('click', function(event) {
+            var c = window.location.search.replace('?webpage=', '');
+            c++;
+            this.setAttribute('href', 'pages.php?webpage=' + c)
+            if (c >= webpages.length) {
+                c = 0;
+                this.setAttribute('href', 'pages.php?webpage=' + c)
+            }
+            for (var i = 0; i < webpages.length; i++) {
+                if (webpages[i].id === c) {
+                    images.style.backgroundImage = "url(" + webpages[i].img + ")";
+                    titles.textContent = webpages[i].title;
+                    sitinfo.innerHTML = webpages[i].siteInfo;
+                    link.textContent = webpages[i].link;
+                    link.setAttribute('href', webpages[i].link);
+                }
+            }
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+            return false;
+        });
+    }
     document.getElementById("load").style.display = 'none';
 };
 close.addEventListener('click', function(event) {
