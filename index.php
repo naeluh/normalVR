@@ -52,7 +52,7 @@
             </ul>
         </div>
     </div>
-    <div class="background-content" style="overflow:hidden;>
+    <div class="background-content" >
         <section class="offset60">
             <h1 contenteditable="false" id="title"></h1>
         </section>
