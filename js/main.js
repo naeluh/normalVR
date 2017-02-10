@@ -114,6 +114,7 @@ window.onload = function() {
             titles.textContent = webpages[i].title;
             sitinfo.innerHTML = webpages[i].siteInfo;
             link.textContent = webpages[i].link;
+            link.setAttribute('href', webpages[i].link);
         }
     }
     if (back !== null) {
@@ -133,6 +134,7 @@ window.onload = function() {
                 titles.textContent = webpages[i].title;
                 sitinfo.innerHTML = webpages[i].siteInfo;
                 link.textContent = webpages[i].link;
+                link.setAttribute('href', webpages[i].link);
             }
         }
         document.body.scrollTop = document.documentElement.scrollTop = 0;
