@@ -8,25 +8,25 @@ webpages = [{
     'id': 0,
     'title': '127.0.0.1',
     'img': '',
-    'link': 'home',
+    'link': 'index.php',
     'siteInfo': '',
   }, {
     'id': 1,
     'title': 'Work',
     'img': '',
-    'link': 'work',
+    'link': 'work.php',
     'siteInfo': '',
   }, {
     'id': 2,
     'title': 'Contact',
     'img': '',
-    'link': 'work.php',
+    'link': 'contact.php',
     'siteInfo': '',
   }, {
     'id': 3,
     'title': 'About',
     'img': '',
-    'link': 'about',
+    'link': 'about.php',
     'siteInfo': '',
 }];
 
@@ -122,7 +122,7 @@ window.onload = function() {
 
 
   for (var w = 0; w < webpages.length; w++) {
-        var h = '<li><a href="#"><p contenteditable="false" >'+webpages[w].title+'</p><img src="" alt=""></a></li>';
+        var h = '<li><a href="'+ webpages[w].link + '"><p contenteditable="false" >'+webpages[w].title+'</p><img src="" alt=""></a></li>';
         document.getElementById('weblist').innerHTML += h;
   }
   var menubuttons = document.querySelectorAll('.list');
@@ -202,7 +202,7 @@ var overlay = document.querySelector("body"),
         'id': 0,
         'title': '127.0.0.1',
         'img': '',
-        'link': '/',
+        'link': 'index.php',
         'siteInfo': '',
     }, {
         'id': 1,
@@ -220,7 +220,7 @@ var overlay = document.querySelector("body"),
         'id': 3,
         'title': 'About',
         'img': '',
-        'link': 'about',
+        'link': 'about.php',
         'siteInfo': '',
     }],
     webpages = [{
