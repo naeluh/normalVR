@@ -70,7 +70,7 @@
     </div>
     <div id="load"><div><b>Loading ...</b></div></div> 
     <!-- <script type="text/javascript" src="js/main.js"></script> -->
-<script type="text/javascript" src="js/work.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
