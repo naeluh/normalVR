@@ -262,7 +262,7 @@ function getRandomArbitrary(min, max) {
 
 window.onload = function() {
 
-if (window.location.href.indexOf('index') !== -1) {
+if (window.location.href.indexOf('pages') === -1 && window.location.href.indexOf('work') === -1 && window.location.href.indexOf('contact') === -1) {
 var color = '#' + Math.random().toString(16).slice(2, 8).toUpperCase();
 var block = document.getElementById('block')
     r = getRandomArbitrary(1.3432, 70.6546);
@@ -281,7 +281,7 @@ var block = document.getElementById('block')
     for (var i = 0, len = menubuttons.length; i < len; i++) {
         menubuttons[i].addEventListener('click', toggleOverlay);
     }
-    if (window.location.href.indexOf('index') === -1) {
+    if (window.location.href.indexOf('pages') !== -1) {
         for (var i = 0; i < webpages.length; i++) {
             if (webpages[i].id === Number(uuid)) {
                 images.style.backgroundImage = "url(" + webpages[i].img + ")";
@@ -295,7 +295,7 @@ var block = document.getElementById('block')
     if (back !== null) {
         back.style.display = "block";
     }
-    if (window.location.href.indexOf('index') === -1) {
+    if (window.location.href.indexOf('pages') !== -1) {
         next.addEventListener('click', function(event) {
             var c = window.location.search.replace('?webpage=', '');
             c++;
@@ -316,6 +316,8 @@ var block = document.getElementById('block')
             document.body.scrollTop = document.documentElement.scrollTop = 0;
             return false;
         });
+    } else {
+
     }
     document.getElementById("load").style.display = 'none';
 };
