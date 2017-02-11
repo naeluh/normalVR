@@ -1,0 +1,227 @@
+@charset "utf-8";
+body {
+	margin:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	background-image:url(http://hulea.org/tippecanone/SiteDesign/Images/bg.aspx);
+	background-repeat:repeat;
+}
+/*a {
+	text-decoration:none;
+	color:#000000;
+}*/
+.e3pagetemplate {
+	color:#fff;
+}
+
+.e3pagetemplate a{
+	color:#fff;
+}
+p {
+	color:#ffffff;
+	font-size:12px;
+	line-height:24pt;
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+	color:#a69554;
+	margin:0;
+	font-weight:normal;
+	font-size:35px;
+}
+ h2 {
+	color:#a69554;
+	margin:0;
+	font-weight:normal;
+	font-size:16px;
+}
+h3 {
+	color:#a69554;
+	margin:0;
+	font-weight:normal;
+}
+img {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.MainInformationTable{ width:100%; }
+.PageManagerInfoContainer { display: none; }
+.TopDropLayout1 {
+	float:left;
+	width:100%;
+}
+.TopDropLayout1 .page_header {
+	float:left;
+	width:100%;
+}
+.page_header .page_header_wrapper {
+	width:986px;
+	margin:auto;
+	height:275px;
+	background-image:url(http://hulea.org/tippecanone/SiteDesign/Images/content_bg.aspx);
+	background-repeat:repeat-y;
+}
+.page_header_wrapper .page_header_1 {
+	float:left;
+	width:960px;
+	height:213px;
+	margin-left:13px;
+}
+.page_header_wrapper .page_header_2 {
+	float:left;
+	width:986px;
+	height:140px;
+	text-align:center;
+	z-index:2;
+	position:relative;
+	margin-top:-150px;
+}
+.page_header_wrapper .page_header_3 {
+	width:960px;
+	margin-left:13px;
+	height:42px;
+	float:left;
+	background-image:url(http://hulea.org/tippecanone/SiteDesign/Images/navbg.aspx);
+	background-repeat:repeat-x;
+}
+.page_header_3 .nav_divider {
+	width:2px;
+	height:31px;
+	padding:1px;
+	background-image:url(http://hulea.org/tippecanone/SiteDesign/Images/nav_divider.aspx);
+	background-repeat:no-repeat;
+}
+
+.page_header_3 .oneCMSMenu, .page_header_3 .CMSMenu{
+	cursor:pointer;
+}
+.page_header_3 .oneCMSMenu {
+	height:42px;
+	margin:auto;
+	font-size:14px;
+	color:#FFFFFF;
+	text-transform:uppercase;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.page_header_3 .oneCMSMenuItem, .page_header_3 .oneCMSMenuHighlightedMenuItem {
+	padding: 0 10px;
+}
+.page_header_3 .oneCMSMenuItemMouseOver, .page_header_3 .oneCMSMenuHighlightedMenuItemMouseOver {
+	padding: 0 10px;
+	color:#2a5e29;
+	background-color:#FFFFFF;
+}
+.page_header_3 .CMSMenu {
+	font-size:12px;
+	color:#2a5e29;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.page_header_3 .CMSMenuItem, .page_header_3 .CMSMenuHighlightedMenuItem {
+	padding:4px 20px 4px 10px;
+	background-color:#FFFFFF;
+}
+.page_header_3 .CMSMenuItemMouseOver, .page_header_3 .CMSMenuHighlightedMenuItemMouseOver {
+	padding:4px 20px 4px 10px;
+	background-color:#f2f2f2;
+}
+.page_header_wrapper .page_header_4 {
+	width:960px;
+	height:15px;
+	float:left;
+	padding:5px 26px 5px 0;
+	background-image:url(http://hulea.org/tippecanone/SiteDesign/Images/content_bg.aspx);
+	background-repeat:repeat-y;
+	font-size:11px;
+}
+.page_header_4 a {
+	text-decoration:none;
+}
+.page_header_4 .currentUserLabelText {
+	float:right;
+	margin-right: 5px;
+}
+.page_header_4 .cmsdesklink {
+	float:right;
+	color:#FFFFFF;
+	margin-right: 5px;
+}
+.page_header_4 .signoutLink {
+	float:right;
+	color:#FFFFFF;
+	text-transform:uppercase;
+}
+.TopDropLayout1 .page_content {
+	float:left;
+	width:100%;
+}
+.page_content .page_content_wrapper {
+	width:986px;
+	margin:auto;
+}
+.page_content_wrapper .page_content_top {
+}
+.page_content_wrapper .page_content_middle {
+	background-image:url(http://hulea.org/tippecanone/SiteDesign/Images/content_bg.aspx);
+	background-repeat:repeat-y;
+	background-position:center top;
+	float:left;
+	width:940px;
+	padding:13px 23px;
+}
+.page_content_wrapper .page_content_bottom {
+	background-image:url(http://hulea.org/tippecanone/SiteDesign/Images/content_footer.aspx);
+	background-repeat:repeat-y;
+	background-position:center top;
+	float:left;
+	width:986px;
+	height:17px;
+}
+.TopDropLayout1 .page_footer {
+	float:left;
+	width:100%;
+}
+.page_footer .page_footer_wrapper {
+	margin:auto;
+	width:986px;
+	padding-top:5px;
+}
+.page_footer_wrapper .page_footer1 {
+	float:left;
+	width:450px;
+	margin-left:10px;
+	color:#fff;
+
+}
+.page_footer1 a {
+	color:#a19153;
+}
+.page_footer_wrapper .page_footer2 {
+	float:right;
+	width:450px;
+	margin-right:10px;
+		color:#fff;
+
+}
+.page_footer2 a {
+	color:#FFFFFF;
+}
+.page_footer2 .poweredby {
+	float:right;
+}
+a {color:#A69554;}
+
+a:visited {color:#C0C0C0;}
+
+.BirAtGlance, .CalAtGlance, .WeaAtGlance {background-color:transparent; border:hidden;}
+.CalAtGlance .AltCont, .CalAtGlance .AltLink, .EveAtGlance .AltLink{ background-color: #303030;}
+
+#holedetails{
+	background:none !important;
+	border:none !important;
+}
+	
+.page_content_middle .ProvisionValidation {
+	color:#FFFFFF;
+}

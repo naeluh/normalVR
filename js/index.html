@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Json Select List  - jsFiddle demo</title>
+  
+  <script type='text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+  <style type='text/css'>
+    
+  </style>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+$(document).ready(function () {
+    var options = [];
+$.getJSON("data/colors.json", function(result) {
+    for (var i = 0; i < result.length; i++) {
+        options.push('<option value="',result[i].colors, '">',result[i].Name, '</option>');
+    }
+    $("#theSelect").html(options.join(''));
+});
+
+
+
+$("#select_add_reservation_1").val('');
+$("#select_add_reservation_2").val('');
+$("#select_add_reservation_3").val('');
+$("#select_add_reservation_4").val('');
+
+$("#select_add_reservation_1").change(
+
+function () {
+    choice = $("#select_add_reservation_1").val();
+    if ((choice === "") || (choice === "None")) {
+        $(".add_reservation_row").hide();
+        $(".select_add_reservation").val('');
+    } else {
+        $("#add_reservation_row_2").show();
+    }
+});
+
+
+
+$("#select_add_reservation_2").change(
+
+function () {
+    choice = $("#select_add_reservation_2").val();
+    if ((choice === "") || (choice === "None")) {
+        $("#add_reservation_row_4").hide();
+        $("#select_add_reservation_4").val('');
+        $("#add_reservation_row_3").hide();
+        $("#select_add_reservation_3").val('');
+    } else {
+        $("#add_reservation_row_3").show();
+    }
+});
+
+$("#select_add_reservation_3").change(
+
+function () {
+    choice = $("#select_add_reservation_3").val();
+    if ((choice === "") || (choice === "None")) {
+        $("#add_reservation_row_4").hide();
+        $("#select_add_reservation_4").val('');
+        //$(".add_reservation_row").hide();
+        //$(".select_add_reservation").val('');
+    } else {
+        $("#add_reservation_row_4").show();
+    }
+});
+});//]]>  
+
+</script>
+
+
+
+</head>
+<body>
+  <div id="add_reservation_row_1">
+     <h6 class="bl_150px select_add_reservation_1_error">First Choice:</h6>
+
+    <select name="select_add_reservation_1" id="select_add_reservation_1" class="select_add_reservation"></select>
+</div>
+<div id="add_reservation_row_2" class="add_reservation_row" style="display: none;">
+     <h6 class="bl_150px select_add_reservation_2_error">Second Choice:</h6>
+
+    <select name="select_add_reservation_2" id="select_add_reservation_2" class="select_add_reservation"></select>
+</div>
+<div id="add_reservation_row_3" class="add_reservation_row" style="display: none;">
+     <h6 class="bl_150px select_add_reservation_3_error">Third Choice:</h6>
+
+    <select name="select_add_reservation_3" id="select_add_reservation_3" class="select_add_reservation"></select>
+</div>
+<div id="add_reservation_row_4" class="add_reservation_row" style="display: none;">
+     <h6 class="bl_150px select_add_reservation_4_error">Fourth Choice:</h6>
+
+    <select name="select_add_reservation_4" id="select_add_reservation_4" class="select_add_reservation"></select>
+</div>
+  
+</body>
+
+
+</html>
+

@@ -1,0 +1,79 @@
+img[src^='https://jsbin-user-assets.s3.amazonaws.com/naeluh/smaller.png?i='] {
+    opacity: 0.5;
+    transform: rotate(45deg)
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+#map_canvas {
+    /*top: 95px;*/
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    border-bottom: 1px solid #aaa;
+    /*background: #fff;*/
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.nhmlogo img {
+    width: 70px;
+    margin: 10px;
+}
+
+body {
+    text-align: center;
+    /*background: #00ECB9;*/
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+h1 {
+    color: #396;
+    font-weight: 100;
+    font-size: 40px;
+    margin: 40px 0px 20px;
+}
+
+#clockdiv {
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    margin-right: 6px;
+}
+
+#clockdiv > div {
+    padding: 10px;
+    border-radius: 3px;
+    /*background: #fff;*/
+    display: inline-block;
+}
+
+#clockdiv div > span {
+    padding: 6px 0px 0px 0px;
+    border-radius: 3px;
+    /*background: #fff;*/
+    display: inline-block;
+    color: #000;
+}
+
+.smalltext {
+    padding-top: 5px;
+    font-size: 16px;
+    color: #000;
+}

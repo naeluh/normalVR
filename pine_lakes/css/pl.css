@@ -1,0 +1,422 @@
+/*mobile preloader*/
+.spinner {
+  top: 48%;
+  -webkit-transform: translateY(-48%);
+      -ms-transform: translateY(-48%);
+          transform: translateY(-48%);
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.container1 > div, .container2 > div, .container3 > div {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container2 {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.container3 {
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+
+.container2 .circle1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.container3 .circle1 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.container1 .circle2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.container2 .circle2 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+.container3 .circle2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+.container1 .circle3 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+.container2 .circle3 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.container3 .circle3 {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+.container1 .circle4 {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+.container2 .circle4 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+
+.container3 .circle4 {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+/*mobile preloader*/
+/*Content*/
+ #mainContent {
+    /* margin: 0% 9% 10% 9%; */
+    z-index: 9999;
+    width: 700px;
+    margin-top: 27px;
+}
+#topContent {
+    position: relative;
+    width:100%;
+    height:50px;
+}
+#midContent {
+    position: relative;
+}
+#botContent {
+    margin:0 auto;
+    width:100%;
+}
+.clear {
+    clear:both;
+    margin-bottom: 3%;
+}
+.column_1_2 {
+    width: 32%;
+    /* float: right; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 20px;
+}
+.column_1_4 {
+    width: 40%;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+}
+.dHide {
+    display:none;
+}
+.mHide {
+    display:block;
+}
+#mainContent img {
+    width:100%;
+}
+#botContent > ul:nth-child(1) > li:nth-child(1) {
+    color:#85BF25;
+}
+#botContent > ul:nth-child(2) > li:nth-child(1) {
+    color:#85BF25;
+}
+#botContent > ul >li {
+    float: left;
+    margin-right: 1.95%;
+    list-style: none;
+    margin-bottom:1%;
+}
+#botContent > ul {
+    margin: 0 auto;
+    padding: 0;
+    font-family:'Open Sans Condensed', Tahoma, Geneva, sans-serif;
+    margin-bottom:1%;
+}
+.numberCircle {
+    behavior: url(PIE.htc);
+    text-align: center;
+    cursor:pointer;
+    color:#000;
+}
+.inside_column {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: absolute;
+    bottom: 0;
+}
+.parGreen {
+    text-transform: uppercase;
+    font-family:'Open Sans Condensed', Tahoma, Geneva, sans-serif;
+    margin-right: 3px;
+    color: #2F4400;
+    float:left;
+}
+#parDist {
+    margin-left: 1%;
+    vertical-align: bottom;
+    display: inline-block;
+    width:75%;
+    line-height: 77%;
+}
+.parWhite {
+    color: #000;
+    font-family:'Open Sans Condensed', Tahoma, Geneva, sans-serif;
+    margin-right: 6px;
+    float:left;
+}
+.currentHole {
+    font-family:'Open Sans Condensed', Tahoma, Geneva, sans-serif;
+    color:#000;
+    line-height: 65%;
+}
+.currentHole span {
+    font-size: 19px;
+}
+#holeBlock {
+    font-size: 50px;
+    color: #2F4400;
+    line-height:0px;
+    margin-bottom: 19px;
+    font-family:'Open Sans Condensed', Tahoma, Geneva, sans-serif;
+}
+#holeNumber {
+    vertical-align: bottom;
+    display: inline-block;
+}
+#playButton {
+    width: 0;
+    height: 0;
+    background-repeat: no-repeat;
+    background-size: 95px;
+    z-index: 9999;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    overflow: hidden;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+        transform: translateY(-50%) translateX(-50%);
+    cursor:pointer;
+}
+#playButton:after {
+    content:"";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top:-500px;
+    margin-left: -500px;
+    border-top: 500px solid transparent;
+    border-bottom: 500px solid transparent;
+    border-left: 500px solid #ccc;
+}
+#videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+#videoWrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#mobileVidOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.img {
+    max-width:65px;
+    float:right;
+}
+.Center-Content{
+    width: 100%;
+}
+#courseImg{
+  background:url(http://www.golfpinelakes.com/images/431/hole1.jpg);
+  width: 309px;
+  height: 442px;
+  display: block;
+  float: left;
+  background-size: cover;
+}
+/*Content*/
+
+/*Pager*/
+ #pager {
+    bottom: 0;
+    top: 0;
+    right: -20px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    height: 55px;
+    margin-left: -20px;
+}
+#next, #prev {
+    display: inline-block;
+    font-size:4em;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+}
+#next, #prev {
+    padding: 0.5em 0em
+}
+#next {
+    text-align: right
+}
+#next:before, #next:after, #prev:before, #prev:after {
+    background: #2F4400;
+    content:"";
+    display: block;
+    height: 0.3em;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0.8em;
+}
+#prev:before, #prev:after {
+    left: 0
+}
+#next:before, #prev:before {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#next:after, #prev:after {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+#prev:after, #next:before {
+    margin-top: -.36em
+}
+#next:hover, #next:focus, #prev:hover, #prev:focus {
+    color: #c00
+}
+#next:hover:before, #next:hover:after, #next:focus:before, #next:focus:after, #prev:hover:before, #prev:hover:after, #prev:focus:before, #prev:focus:after {
+    background: #44551C;
+}
+.pager-n {
+    position: absolute;
+    right:0;
+}
+/*Pager*/
+
+/*Table*/
+#rt1{
+    margin-left: 11px;
+}
+#rt2{
+      margin-left: 11px;
+}
+ .rt {
+    font-family:'Open Sans Condensed', Tahoma, Geneva, sans-serif;
+    width: 380px;
+    font-size: 0.99em !important;
+    /*12*/
+    line-height: 1.25em;
+    /*15*/
+    border-collapse: collapse;
+    border-spacing: 0;
+    float: right;
+
+}
+.rt th, .rt td {
+    margin: 0;
+    padding: 0.416em 0px;
+    /*10*/
+    font-family:'Open Sans Condensed', Tahoma, Geneva, sans-serif;
+    vertical-align: top;
+    border: 1px solid #babcbf;
+    background:#fff;
+    color:#000;
+    text-transform:uppercase;
+    text-align:center;
+    font-weight:bold;
+}
+.rt th {
+    text-align: left;
+    background: #2F4400;
+    color: #fff;
+    text-transform:uppercase;
+    text-align:center;
+}
+.tLink {
+    color:#000000;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+#rt1 > thead > tr > th:nth-child(1){
+  background: #fff;
+  border: none;
+  color:#000;
+}
+/*Table*/
+

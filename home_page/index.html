@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <title>Natural History Museum of Los Angeles</title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <link href="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/images/NHM_favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <meta content="WORKING SLIDER NO INFINITE YET" name="description">
+  <meta content="natural history museum,nhm,collections,exhibits,specimens,science,research,exhibitions,dinosaurs,mammals,evolution,history,california,american,african,education,teachers,learning,enviroment,first fridays,family,endeavour,endeavor,space shuttle,exposition park,expo park,science center,metro,los angeles" name="keywords">
+  <meta content="2012-08-06T00:00:00Z" name="dcterms.date">
+  <meta content="©2013 Natural History Museum of Los Angeles County" name="copyright">
+  <link href="http://www.nhm.org/site/" rel="canonical">
+  <meta content="1 day" name="revisit-after">
+  <meta content="index, follow" name="robots">
+  <meta content="rYrc0eOlcP3aA/4o4SxnYPTJPHCtTsKbeT3mLf1MALg=" name="verify-v1">
+  <script async="" src="http://www.google-analytics.com/plugins/ua/linkid.js" type="text/javascript"></script>
+  <script async="" src="http://www.google-analytics.com/analytics.js"></script><!-- CAREFUL HERE DO NOT BANK ON THE IDEA THAT YOU CAN DO THIS BUT YOU PROB CAN -->
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script><!--<script type="text/javascript" src="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/js/jquery-1.3.2.min.js?3"></script>-->
+  <!-- CAREFUL HERE DO NOT BANK ON THE IDEA THAT YOU CAN DO THIS BUT YOU PROB CAN -->
+
+  <script src="jquery-visibility.js" type="text/javascript"></script>
+  <script src="http://www.nhm.org/site/misc/drupal.js?3" type="text/javascript"></script>
+  <script src="http://www.nhm.org/site/sites/all/modules/jquery_aop/misc/jquery.aop.js?3" type="text/javascript"></script><!-- <script type="text/javascript" src="http://www.nhm.org/site/sites/all/modules/lightbox2/js/lightbox.js?3"></script> -->
+
+  <script src="http://www.nhm.org/site/misc/jquery.form.js?3" type="text/javascript"></script>
+  <script src="http://www.nhm.org/site/sites/all/modules/popups/popups.js?3" type="text/javascript"></script>
+  <script src="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/js/jquery.clearinginput.min.js?3" type="text/javascript"></script>
+  <script src="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/js/header.js?3" type="text/javascript"></script><!-- <script type="text/javascript" src="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/js/jquery-ui-1.7.2.custom.min.js?3"></script> -->
+
+  <script src="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/js/jquery.cookie.min.js?3" type="text/javascript"></script>
+  <script src="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/js/swfobject/swfobject.js?3" type="text/javascript"></script>
+  <script src="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/js/exnav.min.js?3" type="text/javascript"></script><!-- <script type="text/javascript" src="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/js/alerts.min.js?3"></script> -->
+  <link href="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/css/jquery-ui-1.7.2.custom.css?3" media="all" rel="stylesheet" type="text/css">
+  <link href="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/css/jquery-ui-1.7.2.custom.css?T" media="all" rel="stylesheet" type="text/css">
+  <link href="http://www.nhm.org/site/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?T" media="all" rel="stylesheet" type="text/css">
+  <link href="http://www.nhm.org/site/sites/all/modules/date/date_popup/themes/jquery.timeentry.css?T" media="all" rel="stylesheet" type="text/css">
+  <link href="http://www.nhm.org/site/sites/all/modules/lightbox2/css/lightbox.css?T" media="all" rel="stylesheet" type="text/css">
+  <link href="http://www.nhm.org/site/sites/all/modules/views/css/views.css?T" media="all" rel="stylesheet" type="text/css">
+  <link href="http://www.nhm.org/site/sites/all/modules/popups/popups.css?T" media="all" rel="stylesheet" type="text/css">
+  <link href="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/popups-skin.css?T" media="all" rel="stylesheet" type="text/css">
+  <link href="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/css/funky-tabs.css?T" media="all" rel="stylesheet" type="text/css">
+  <link href="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/css/base.css?T" media="all" rel="stylesheet" type="text/css">
+  <link href="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/css/nodes.css?T" media="all" rel="stylesheet" type="text/css">
+  <link href="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/css/nhm_print.css?T" media="print" rel="stylesheet" type="text/css">
+  <link href="extra.css" rel="stylesheet" type="text/css"><!--script type="text/javascript" src="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/js/gatag.js"></script-->
+  <!-- NHM Google Tracker -->
+  <meta content="6398c35c12ce5930d6417ecdc4dace01" name="p:domain_verify">
+  <meta content="IE=EmulateIE9" http-equiv="X-UA-Compatible">
+  <script src="http://stage.nhm.org//site/sites/all/themes/zen_nhm_theme/js/fittext.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <!-- GNAV START -->
+
+  <div id="navContainer">
+    <nav id="gNav">
+      <div id="gblheader">
+        <p id="button" style="color:black;">The Family of Museums</p>
+
+        <p style="display:none;"><a href="/about-our-museums">Read more about our Family</a></p>
+
+        <ul>
+          <li>
+            <a href="nhm.org" target="_blank">nhm.org</a> |
+          </li>
+
+          <li>
+            <a href="tarpits.org" target="_blank">tarpits.org</a> |
+          </li>
+
+          <li>
+            <a href="hartmuseum.org" target="_blank">hartmuseum.org</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="blClear"></div>
+
+      <ul class="pos_up" id="gNavContent">
+        <li>
+          <a href="#">
+          <h1 id="gNavHeader1">Natural History Museum of Los Angeles County</h1>
+
+          <p id="gNavCopy1">NHM has amassed one of the world’s most extensive and valuable collections of natural and cultural history — more than 35 million objects, some as old as 4.5 billion years.</p><img src="https://jsbin-user-assets.s3.amazonaws.com/naeluh/nhm-logo.png"></a>
+        </li>
+
+        <li>
+          <a href="#">
+          <h1 id="gNavHeader2">Page Museum at La Brea Tar Pits</h1>
+
+          <p id="gNavCopy2">Located in the heart of metropolitan Los Angeles, the world famous Page Museum at the La Brea Tar Pits represents the only active urban paleontological excavation site in the world.</p><img src="https://jsbin-user-assets.s3.amazonaws.com/naeluh/tarpits-logo.png"></a>
+        </li>
+
+        <li>
+          <a href="#">
+          <h1 id="gNavHeader3">Hart Museum and Ranch</h1>
+
+          <p id="gNavCopy3">Silent film star William S. Hart purchased ranch property in Newhall, north of Los Angeles, in 1921. He built a 22-room mansion and filled it with Western art, Native American artifacts, and early Hollywood memorabilia.</p><img src="https://jsbin-user-assets.s3.amazonaws.com/naeluh/hart-logo.png"></a>
+        </li>
+
+        <li id="closeNav">X</li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="bkgrd"></div><!-- GNAV END --><!-- blContent start -->
+
+  <div id="blContent">
+    <!-- blContent start -->
+    <!-- header  -->
+
+    <div id="exnav-block">
+      <div id="blHeader">
+        <h1><a href="http://www.nhm.org/site/">Natural History Museum of Los Angeles</a></h1><!-- Begin bl_menu_top -->
+
+        <div id="bl_menu_top" style="">
+          <form accept-charset="UTF-8" action="http://www.nhm.org/site/" id="search-theme-form" method="post" name="search-theme-form">
+            <div>
+              <div class="container-inline" id="search">
+                <div class="form-item" id="edit-search-theme-form-1-wrapper">
+                  <input class="blur" id="nhm_search_input" name="search_theme_form" type="text" value="SEARCH">
+                </div><input class="form-submit" id="edit-submit-1" name="op" style="display: none;" type="submit" value="Search"> <input id="form-UKnXMBhBCTS5frYwKASzvx_eq0406ltQ4aqqhCd89IE" name="form_build_id" type="hidden" value="form-UKnXMBhBCTS5frYwKASzvx_eq0406ltQ4aqqhCd89IE"> <input id="edit-search-theme-form" name="form_id" type="hidden" value="search_theme_form">
+              </div>
+            </div>
+          </form><!--<input name="" type="text" value="SEARCH" />-->
+
+          <div id="bl_menu_top_links">
+            <div id="exnav-secondary-links">
+              <ul class="links secondary-links">
+                <li class="menu-1239 first">
+                  <a href="http://www.nhm.org/site/about-our-museums" title="About Our Museums">About Our Museums</a>
+                </li>
+
+                <li class="menu-1242">
+                  <a href="http://shop.nhm.org/" target="_blank" title="Opens in a new window">Shop</a>
+                </li>
+
+                <li class="menu-1243">
+                  <a href="http://www.nhm.org/site/join-us/make-a-gift" title="Donate">Donate</a>
+                </li>
+
+                <li class="menu-1241">
+                  <a href="http://www.nhm.org/site/join-us/membership" title="Membership">Membership</a>
+                </li>
+
+                <li class="menu-1240">
+                  <a href="http://www.nhm.org/site/join-us/volunteers-docents" title="Volunteer">Volunteer</a>
+                </li>
+
+                <li class="menu-31987">
+                  <a href="http://www.nhm.org/site/about-our-museums/event-rentals-filming" title="Events/Filming">Events/Filming</a>
+                </li>
+
+                <li class="menu-16619 last">
+                  <a href="http://www.nhm.org/site/plan-your-visit/tickets" title="Tickets">Tickets</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="blClear"></div>
+
+        <div id="bl_menu">
+          <div id="exnav-primary-links">
+            <ul class="links primary-links">
+              <li class="menu-1227 first">
+                <a href="http://www.nhm.org/site/plan-your-visit" title="Plan Your Visit">Plan Your Visit</a>
+              </li>
+
+              <li class="menu-1245">
+                <a href="http://www.nhm.org/site/explore-exhibits" title="Explore Exhibits">Explore Exhibits</a>
+              </li>
+
+              <li class="menu-1229">
+                <a href="http://www.nhm.org/site/calendar" title="Calendar">Calendar</a>
+              </li>
+
+              <li class="menu-1439">
+                <a href="http://www.nhm.org/site/activities-programs" title="Activities &amp; Programs">Activities &amp; Programs</a>
+              </li>
+
+              <li class="menu-1441">
+                <a href="http://www.nhm.org/site/for-teachers" title="For Teachers">For Teachers</a>
+              </li>
+
+              <li class="menu-1233">
+                <a href="http://www.nhm.org/site/research-collections" title="Research and Collections">Research and Collections</a>
+              </li>
+
+              <li class="menu-1440 last">
+                <a href="http://www.nhm.org/site/join-us" title="Join Us">Join Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="blClear"></div>
+        </div>
+
+        <div class="blClear"></div>
+      </div>
+    </div><!-- header -->
+    <!-- slider new -->
+
+    <div id="container">
+      <div id="preloader"><img height="28" src="imgs/loader.gif" width="28"></div>
+
+      <div class="slider-wrap" id="sWrap" style="display:none;">
+        <div class="holder m">
+          <div class="slide-wrapper">
+            <div class="slide" style="background-image: url(imgs/NHM_AIN_Slider.jpg);"></div>
+          </div>
+
+          <div class="slide-wrapper">
+            <div class="slide" style="background-image: url(imgs/Grandes-Maestros-Slider.jpg);"></div>
+          </div>
+
+          <div class="slide-wrapper">
+            <div class="slide" style="background-image: url(imgs/Insect-Book_Slider_NHM.jpg);"></div>
+          </div>
+
+          <div class="slide-wrapper">
+            <div class="slide" style="background-image: url(imgs/First-Fridays_2015_Slider.jpg);"></div>
+          </div>
+
+          <div class="slide-wrapper">
+            <div class="slide" style="background-image: url(imgs/Page_Museum_Slider.jpg);"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="shadowDivTop"></div>
+
+      <div class="frame-indicator-wrap sliderTools">
+        <ul id="frame-indicator"></ul>
+      </div>
+
+      <div class="sliderTools" id="pager">
+        <div id="p"></div>
+
+        <div id="n"></div>
+      </div>
+    </div><script type="text/javascript">
+    var imageSrcs = [];
+      imageSrcs = ['http://i.imgur.com/YgNV3.jpg', 'http://www.nhm.org/site/sites/default/files/nhmnext/next_landing_slide_04.jpg', 'http://www.nhm.org/site/sites/default/files/nhmnext/next_project_Haaga_slide_03.jpg','http://i.imgur.com/z2eifSm.jpg','http://i.imgur.com/1q5TzXL.jpg','http://i.imgur.com/zYyKyOk.jpg'];
+    </script> <!-- slider new -->
+     <!-- Spacer -->
+     <!-- Spacer -->
+     <!-- Begin bl_content_box -->
+
+    <div id="home_page_bl_content_box">
+      <div class="actionMenu">
+        <h1><a href="/plan-your-visit/tickets" id="tickets"><img src="imgs/NHM_Website_Homepage_Icons-03.svg">Tickets</a></h1>
+
+        <h1><a href="/join-us/membership" id="membership"><img src="imgs/NHM_Website_Homepage_Icons-02.svg">Join Today</a></h1>
+
+        <h1><a href="http://shop.nhm.org/" id="shop" target="_blank" title="Opens in a new window"><img src="imgs/NHM_Website_Homepage_Icons-01.svg">Shop</a></h1>
+
+        <h1><a href="/calendar" id="calendar"><img src="imgs/NHM_Website_Homepage_Icons-04.svg">Calendar</a></h1>
+      </div>
+
+      <div id="six_grid">
+        <div id="shadowDiv"></div>
+
+        <ul>
+          <li>
+            <a href="#" style="background-image: url(imgs/NHM-Home-Page-Visit.jpg);" title=""><span>Visit</span></a>
+          </li>
+
+          <li>
+            <a href="#" style="background-image: url(imgs/NHM-Home-Page-Exhibits.jpg);" title=""><span>Exhibits</span></a>
+          </li>
+
+          <li>
+            <a href="#" style="background-image: url(imgs/NHM-Home-Page-Events.jpg);" title=""><span>Events</span></a>
+          </li>
+
+          <li>
+            <a href="#" style="background-image: url(imgs/NHM-Home-Page-Research.jpg);" title=""><span>Research</span></a>
+          </li>
+
+          <li>
+            <a href="#" style="background-image: url(imgs/NHM-Home-Page-Nature.jpg);" title=""><span>Nature</span></a>
+          </li>
+
+          <li>
+            <a href="#" style="background-image: url(imgs/NHM-Home-Page-Teachers.jpg);" title=""><span>Teachers</span></a>
+          </li>
+        </ul>
+      </div><!-- Spacer -->
+
+      <div class="blClear"></div><!-- Spacer -->
+    </div>
+
+    <script>
+    //$(".block-nice_menus").remove();
+    $(".block-user").remove();
+    </script> <!-- End bl_content_box -->
+     <!-- Spacer -->
+
+    <div class="blClear"></div><!-- Spacer -->
+    <!-- Begin blFooter -->
+
+    <div id="footer_upper">
+      <div id="footer_upper_left">
+      <p>We are grateful to our Institutional Partners</p><img src="imgs/tarpits_footer_inst_partners_TWC_JPM_justlogos.png"></div>
+
+      <div id="footer_upper_right">
+        <ul id="social_links">
+          <li>
+            <a href="#"><img src="imgs/twitter.jpg"></a>
+          </li>
+
+          <li>
+            <a href="#"><img src="imgs/facebook.jpg"></a>
+          </li>
+
+          <li>
+            <a href="#"><img src="imgs/instagram.jpg"></a>
+          </li>
+
+          <li>
+            <a href="#"><img src="imgs/youtube.jpg"></a>
+          </li>
+
+          <li>
+            <a href="#"><img src="imgs/pinterest.jpg"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="blFooter">
+      <div class="bl_right">
+        <div style="margin-top: 2px;">
+          <a href="http://cssd.lacounty.gov/wps/portal/cssd/parents/mostwanted" style="color: #636363;font-weight: bold;text-decoration: none;" target="_blank" title="Opens in a new window">Public Service Notice</a>
+        </div>
+      </div>
+
+      <div class="clear-block block block-menu" id="block-menu-menu-footer">
+        <div class="content">
+          <ul class="menu">
+            <li class="leaf first">
+              <a href="http://www.nhm.org/site/about-our-museums/contact-us">Contact Us</a>
+            </li>
+
+            <li class="leaf">
+              <a href="http://www.nhm.org/site/about-our-museums/press">Press</a>
+            </li>
+
+            <li class="leaf">
+              <a href="http://www.nhm.org/site/about-our-museums/working-at-nhm">Careers</a>
+            </li>
+
+            <li class="leaf">
+              <a href="http://www.nhm.org/site/about-our-museums/terms-of-use">Terms of Use</a>
+            </li>
+
+            <li class="leaf">
+              <a href="http://www.nhm.org/site/about-our-museums/e-news/subscribe">e-News</a>
+            </li>
+
+            <li class="leaf last">
+              <a href="http://www.nhm.org/site/about-our-museums/feedback">Feedback</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="blClear"></div>
+    </div><!-- End blFooter -->
+    <!-- blContent end -->
+  </div><!-- blContent end -->
+  <script charset="utf-8" src="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/js/slider.min.js" type="text/javascript"></script>
+  <link href="http://www.nhm.org/site/sites/all/themes/zen_nhm_theme/css/slider.css" media="all" rel="stylesheet" type="text/css"><script type="text/javascript">
+$(document).ready(function() {
+    $('#nhm_slider').fadeIn('slow');
+    $('#nhm_slider img').fadeIn('slow');
+    $('#slides').slides({});
+  });
+  </script> <script>
+var my_href = window.location.pathname;
+  $(".bl_left_column li").each(function() {
+    this_href = $(this).find("a").attr("href");
+    if (my_href.match(this_href)) {
+        $(".menu-active").removeClass("menu-active"); // just in case
+        $(this).addClass("menu-active");
+      }
+    });
+  $("#bl_menu li a").each(function() {
+    this_href = $(this).attr("href");
+    if (my_href.indexOf(this_href) == 0) {
+        $(".top-menu-active").removeClass("top-menu-active"); // just in case
+        $(this).addClass("top-menu-active");
+      }
+    });
+  $(function() {
+    $('a[rel="external"]').click(function() {
+      this.target = "_blank";
+    });
+    $('a[href^="http"]').attr({
+      target: "_blank",
+      title: "Opens in a new window"
+    });
+    $('a[href^="http://www.nhm.org"]').attr({
+      target: "_self",
+      title: "Opens in same window"
+    });
+  });
+  </script> <script src="extra_working_css3_ie8.js" type="text/javascript"></script>
+</body>
+</html>

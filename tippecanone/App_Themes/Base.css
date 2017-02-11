@@ -1,0 +1,129 @@
+﻿/* Global Fixes */
+#cloned {display:none;}
+
+.EmChoPro {display:none;}
+.DesignMode .EmChoPro , .EditMode .EmChoPro {display:block;}
+.dialog .message-body .message {padding:0px;}
+/* Newsletter */
+.newsletters {width:100%; font-family:Verdana, Arial, Helvetica, sans-serif;}
+.newsletters_Left {width:200px;}
+.newsletters .items_container {width:100%; font-size:12px;}
+.newsletters .item {padding:10px}
+.newsletters .item a { color: #000;}
+.newsletters .item-selected {padding:5px; background-color: #eaddc6; }
+.newsletters .item-selected a {padding:5px; color: #000;}
+.newsletters .document_container {background-color:#eaddc6; padding:10px}
+.newsletters .document_container table {width:100%;}
+.newsletters .viewerHeader {font-size:12px;}
+.newsletters .viewerHeader a {color:#000; font-weight:bold;}
+.newsletters .viewerHeader a:hover {background-color:#fdfdfd;}
+.VideoLikeContent {text-align:center;}
+.VideoLikeContent object {margin:0 auto;}
+
+/* At Glance Shared*/
+.BirAtGlance , .CalAtGlance , .WeaAtGlance {width:200px;font-family:Verdana, Arial, Helvetica, sans-serif;border:1px solid #666;font-size:12px;float:right;clear:both;background-color:#fff;}
+.WebPartLeft .BirAtGlance , .WebPartLeft .CalAtGlance , .WebPartLeft .WeaAtGlance {float:left;}
+.EveAtGlance .AGTitle {width:100%;margin:0 auto;font-weight:bold;}
+.BirAtGlance .AGTitle , .CalAtGlance .AGTitle {width:94%;padding:6px;font-size:13px;font-weight:bold;}
+.BirAtGlance .AGScroll , .CalAtGlance .AGScroll {width:94%;padding:0 6px 6px 6px;margin:0 auto;}
+.BlogAtGlance {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #666666;
+    border-left: 1px solid #666666;
+    border-right: 1px solid #666666;
+    clear: both;
+    float: right;
+    font-size: 12px;
+    padding: 0 10px 10px;
+    width: 180px;
+}
+
+
+/* Bir At Glance */
+.BirAtGlance .AGCont {width:100%;margin:0 auto;}
+.BirAtGlance .Sep {height:5px;}
+.BirAtGlance .Cont1 {font-size:11px; padding:5px 0; border-bottom:1px solid #999;}
+.BirAtGlance .Link {height:20px;}
+.BirAtGlance .AltLink {background-color:#eee; height:20px;}
+.BirAtGlance .Link2 {padding-left:4px;}
+
+/* Weather At Glance */
+.AGToday {float:left; clear:both;}
+.AGToday .AGDate , .AGDay .AGDate {width:145px; float:right; height:20px; font-weight:bold; border-bottom:1px solid #999;}
+.AGDay .AGDate {height:auto;}
+.AGToday .AGPic , .AGDay .AGPic {width:40px; height:40px; float:left;}
+.AGDay .AGPic image , .AGDay .AGPic image {width:30px; float:right;}
+.AGToday .AGTemp , .AGToday .AGCast , .AGToday .AGHumi , .AGDay .AGTemp , .AGDay .AGCast , .AGDay .AGHumi {width:145px; float:right;}
+.AGDay {margin-top:10px;float:left; clear:both; font-size:11px;width:100%;}
+
+/* Calendar At Glance */
+.CalAtGlance .Cont2 {font-size:11px; padding:3px 3px 8px 3px;}
+.CalAtGlance .Link2 {padding:8px 3px 3px 3px;}
+.CalAtGlance .AltCont , .CalAtGlance .AltLink , .EveAtGlance .AltLink {background-color:#eee;}
+
+/* Member Facing Pages */
+.ChangePasswordBtn {width:121px;height:22px;background-image:url(http://hulea.org/tippecanone/App_Themes/Default/Images/ChangePass.gif);background-position:top;}
+.ChangePasswordBtn:hover {background-position:bottom;cursor:pointer;}
+.ChangePasswordTable {font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;}
+.ProvisionLabel , .ProvisionBox , .ProvisionButton {clear:left;float:left;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:12px;}
+.ProvisionFirstName , .ProvisionLastName {float:left;width:155px;}
+.ProvisionValidation .ProvisionBox input {width:285px;margin:3px 0 3px 3px;}
+.ProvisionFirstName .ProvisionBox input , .ProvisionLastName .ProvisionBox input {width:130px;margin:3px 0 3px 3px;}
+.ProvisionRegistration .ProvisionBox input , .ProvisionPassword  .ProvisionBox input {width:200px;margin:3px 0 3px 3px;}
+.ProvisionPassword , .ProvisionUsername , .ProvisionEmail {margin-top:10px;}
+.LoginForm {width:292px;margin:0 auto;font-family:Verdana, Arial, Helvetica, sans-serif;}
+.LoginForm2{width:320px;margin:8px auto;font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:bold;}
+.LoginForm table {width:100%;}
+.LoginFormHeading , .LoginFormFailText , .LoginFormUserName , .LoginFormPassword {float:left;clear:left;width:225px;padding:2px 0;font-size:12px;}
+.LoginFormFailText {color:#FF0000; height:22px;}
+.LoginFormText {float:left;width:80px;text-align:right;padding:2px 3px 0 0;}
+.LoginFormField {float:left;width:140px;} 
+.LoginFormField input {width:120px; text-align:left; float:left;}
+.LoginFormRemember , .LoginFormForgotPassword , .LoginFormMemReg {padding-left:80px;float:left;clear:left;width:140px;font-size:11px;}
+.LoginFormForgotPassword , .LoginFormMemReg {padding-top:10px}
+.LoginFormLogon {float:right;width:60px;clear:right;margin-top:-52px;}
+.IE7 .LoginFormLogon {float:right;width:60px;clear:right;margin-top:24px;}
+.LoginFormLogon input {width:60px;height:50px;}
+.ProvisionConfirmation {font-family:Verdana, Arial, Helvetica, sans-serif;font-size:12px;}
+.ProvisionReset .ProvisionResetPassword div {padding:4px;}
+.ProvisionSetPassword {font-family:Verdana, Arial, Helvetica, sans-serif; width:350px; margin:10px auto; font-size:14px;}
+.ProvisionPassword .ProvisionBox span {display:block; clear:left;}
+.ProvisionCreateUser {width:84px;height:22px;background-image:url(http://hulea.org/tippecanone/App_Themes/Default/Images/CreateUser.gif);background-position:top; float:left;}
+.ProvisionCancel {width:52px;height:22px;background-image:url(http://hulea.org/tippecanone/App_Themes/Default/Images/Cancel.gif);background-position:top; float:left;}
+.ProvisionCancel:hover , .ProvisionCreateUser:hover {background-position:bottom;cursor:pointer;}
+.RosterEditSave {background-position:top;height:22px;margin:0 5px 4px 0;float:left;}
+.RosterEditSave {background-image:url(http://hulea.org/tippecanone/App_Themes/Default/Images/RosterSave.gif);width:128px;}
+.RosterEditSave:hover {background-position:bottom;}
+
+/* Business Directory */
+
+.ChoBusinessDirectory {font-family:Verdana, Geneva, sans-serif; font-size:12px; width:600px;}
+.ChoBusinessDirectory .BusDirSearchContent {width:600px;}
+.ChoBusinessDirectory .BusDirSearchState .BusDirInput {width:110px;}
+.ChoBusinessDirectory .BusDirSearchCity .BusDirInput {width:110px;}
+.ChoBusinessDirectory .BusDirSearchZip .BusDirInput {width:110px;}
+.ChoBusinessDirectory .BusDirTextContent {margin-top:5px;}
+.ChoBusinessDirectory .BusDirGoogleMap {margin:5px 0;}
+.ChoBusinessDirectory .BusDirResultNumber {margin:5px 0; font-weight:bold;}
+.ChoBusinessDirectory .BusDirResultBoxLeft {font-size:12px; width:350px;}
+.ChoBusinessDirectory .BusDirResultBoxRight {font-size:11px; width:250px;}
+.ChoBusinessDirectory .BusDirResultHeader {font-weight:bold;}
+.ChoBusinessDirectory .BusDirResultItemHeader {font-size:13px; font-weight:bold; clear:both;}
+.ChoBusinessDirectory .BusDirResultItem {border:1px solid #999; padding:5px;}
+.ChoBusinessDirectory .BusDirResultList {clear:both;}
+.BusDirSearchButtonInput {text-align:center;}
+.BusDirSearchButtonInput2 {font-size:11px; margin-top:10px; text-align:center;}
+.BusDirResultNumber .DESVALSummaryErrors {font-size:12px;}
+
+/* BizForm Errors */
+.EditingFormErrorLabel {color:#c90000;}
+
+.ProvisionValidation .RosterEditCustomTable {width:100%;}
+.ProvisionValidation .RosterEditCustomTableL {width:127px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px;}
+.ProvisionValidation .RosterEditCustomTableR {width:auto;}
+
+.ie6_message {width:100%; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000; background-color:#fff; line-height:25px; border-bottom:1px solid #333;}
+
+
+/* 7 fixes */
+.PageManagerInfoContainer {display:block !important;}

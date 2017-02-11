@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src=http://code.jquery.com/jquery-1.11.1.min.js></script>
+<meta name=description content="gif painting wip NSFW" />
+<meta charset=utf-8>
+<title>&#9760;</title>
+<style id=jsbin-css>html{overflow:hidden}canvas{position:absolute;top:0;left:0}#loading{position:absolute;top:0;left:0;background:#000;width:100%;height:100%;color:#fff}</style>
+</head>
+<body>
+<div id=loading style=display:block>Loading...</div>
+<div id=gifs style=display:block></div>
+<script src=http://aa8f47fcc01b7584f779-b57f388ffba74a9d5600392ce75da4b1.r13.cf2.rackcdn.com/gif.js></script>
+<script src=http://aa8f47fcc01b7584f779-b57f388ffba74a9d5600392ce75da4b1.r13.cf2.rackcdn.com/AnimationFrame.js></script>
+<script id=jsbin-javascript>var ajaxlength=[],value=isNaN(value)?0:value,valueajax=isNaN(valueajax)?0:valueajax,cvs=document.getElementById("mycanvas"),animationFrame=new AnimationFrame(120),ct=[],ct2=[],g=[],gifLoad=[],canarr=[],canarr2=[];function extractToken(b){b=b.match(/access_token=(\w+)/);return !!b&&b[1]}var token=extractToken(document.location.hash),clientId="b144351ffb05838";authorization=token?"Bearer "+token:"Client-ID "+clientId;$.ajax({url:"https://api.imgur.com/3/gallery/random/random/page="+Math.floor(50*Math.random()),method:"GET",headers:{Authorization:authorization,Accept:"application/json"},crossDomain:!0,data:{image:localStorage.dataBase64,type:"base64"},beforeSend:function(){$("#loading").css("display","block")},success:function(b){$.each(b.data,function(f,a){if(!1!==b.data[f].animated&&!0!==b.data[f].is_album){var e=GIF(a.link);e.render();g.push(e);loadStupid();$("#gifs").html(g.length)}})}});function loadStupid(){setTimeout(function(){$("#loading").fadeOut(1000)},10000*Number(g.length))}function createCanvas(f,i){var e=document.createElement("canvas");e.width=window.innerWidth;e.height=window.innerHeight;document.body.appendChild(e);var h=e.getContext("2d");f.push(h);i.push(e)}window.addEventListener("mousemove",function(e){for(var f=0;f<g.length;f++){var d=ct2[f%ct2.length];0>=ct2.length||(d.globalCompositeOperation="source-over",d.beginPath(),d.arc(e.pageX,e.pageY,50,0,2*Math.PI,!1),d.fill(),d.fillStyle="rgba(255,255,255,1)")}});window.addEventListener("mousedown",function(b){createCanvas(ct,canarr);createCanvas(ct2,canarr2)});function animloop(){animationFrame.request(animloop);for(var h=0;h<g.length;h++){var k=h%g.length,f=g[k],j=ct[k],i=ct2[k],k=canarr[k];0<ct.length&&0<ct2.length&&0<canarr.length&&0<g.length&&void 0!==j&&!0===f.rendered&&!0===f.loaded&&(j.clearRect(0,0,window.innerWidth,window.innerHeight),j.globalCompositeOperation="source-over",i.globalCompositeOperation="source-atop",i.drawImage(f.frames[f.currentFrame()].ctx.canvas,0,0,window.innerWidth,window.innerHeight),j.drawImage(k,0,0,window.innerWidth,window.innerHeight),j.globalCompositeOperation="source-atop")}}animloop();window.addEventListener("resize",function(){for(var b=0;b<g.length;b++){0<canarr.length&&0<canarr2.length&&(canarr.width=window.innerWidth,canarr.height=window.innerHeight,canarr2.width=window.innerWidth,canarr2.height=window.innerHeight)}});</script>
+</body>
+</html>

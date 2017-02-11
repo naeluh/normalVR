@@ -87,11 +87,32 @@
             <div id="block"></div>
         </div>
 
-    </div>
+    </div> 
+    <div id="root"></div>
     <div id="load">
         <div><b>Loading ...</b></div>
     </div>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+
+        function formatName(user) {
+          return user.firstName + ' ' + user.lastName;
+        }
+
+        const user = {
+          firstName: 'Harper',
+          lastName: 'Perez'
+        };
+
+        const element = (
+          <h1>
+            Hello, {formatName(user)}!
+          </h1>
+        );
+
+    </script>
 </body>
 
 </html>
